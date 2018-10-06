@@ -73,7 +73,7 @@ public void onStart() {
 }
 
 public void onStop() {
-    RxBus.unregister();
+    RxBus.unregister(this);
 }
 ```
 
