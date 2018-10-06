@@ -1,5 +1,12 @@
 apply plugin: 'java-library'
 
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
