@@ -6,11 +6,15 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+import io.reactivex.functions.Predicate;
+
 @Documented
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 public @interface Subscribe {
+
+    Predicate alwaysTrue = (o) -> true;
 
     /**
      * The channels on which the event is subscribed.
@@ -31,5 +35,4 @@ public @interface Subscribe {
      * @return the list of channel ids.
      */
     RxThread thread() default RxThread.POSTING;
-
 }

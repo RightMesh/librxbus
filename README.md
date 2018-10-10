@@ -1,5 +1,7 @@
 # RxBus
 
+[![](https://jitpack.io/v/RightMesh/librxbus.svg)](https://jitpack.io/#RightMesh/librxbus)
+
 RxBus is a small and simple Event Bus using RxJava. You can use this library
 in your project with gradle using jitpack:
 
