@@ -1,9 +1,19 @@
-apply plugin: 'java-library'
+plugins {
+    id("java-library")
+}
 
-allprojects {
-    repositories {
-        google()
-        jcenter()
+repositories {
+    google()
+    jcenter()
+}
+
+test {
+    useJUnit()
+    maxHeapSize = '1G'
+
+    filter {
+        //include all integration tests
+        includeTestsMatching "*Test"
     }
 }
 
