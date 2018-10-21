@@ -16,6 +16,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 
 /**
@@ -41,7 +42,7 @@ public class RxBus {
 
     private RxBus() {
         bus = PublishSubject.create().toSerialized();
-        subscriptions = new HashMap<>();
+        subscriptions = new ConcurrentHashMap<>();
     }
 
     /**
